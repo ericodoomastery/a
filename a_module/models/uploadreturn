@@ -1,1 +1,11 @@
+from odoo import models, fields, api
 
+class AttachReturn(models.Model):
+    _name = "a_module.attach_return"
+    _description = "Attach Return"
+
+    name = fields.Char(string="Return Name", required=True)
+    sale_order_id = fields.Many2one('sale.order', string="Related Sales Order")
+    file = fields.Binary(string="Attachment")
+    file_name = fields.Char(string="File Name")
+    date_uploaded = fields.Datetime(string="Date Uploaded", default=fields.Datetime.now)
