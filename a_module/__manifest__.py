@@ -1,13 +1,14 @@
-# my_module/__manifest__.py
 {
-    "name": "AttachReturn",
+    "name": "Attach Return",
     "version": "1.0",
-    "summary": "Custom model example",
-    "category": "Custom",
+    "summary": "Attach Return functionality for Sales Orders",
+    "category": "Sales",
     "author": "Eric",
     "license": "LGPL-3",
-    "depends": ["base", "stock"],  # add stock for stock moves/products
-    "data": [],
+    "depends": ["sale"],  # add other dependencies if needed
+    "data": [
+        # Add XML files for views here later
+    ],
     "installable": True,
-    "application": True,
+    "application": False,
 }
